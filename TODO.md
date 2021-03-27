@@ -17,7 +17,8 @@
     - [ ] Databases
     - [ ] Gino
     - [ ] Tortoise
-* [ ] Run server via CLI or Python code.
+* [X] Run server via CLI or Python code.
+* [ ] Add Gunicorn.
 * [ ] Setup Access and Application logging.
 * [ ] Setup k8s.
 * [ ] Setup NoSQL databases
@@ -30,6 +31,6 @@
     - [ ] github
     - [ ] travis
     - [ ] jenkins
-* [ ] Add Python package dependency manager
+* [X] Add Python package dependency manager
   + [X] Poetry
-  + [ ] Pip
+  + [X] Pip

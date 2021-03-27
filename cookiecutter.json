@@ -6,5 +6,7 @@
   "full_name": "Default Name",
   "email": "default@email.com",
 
-  "run_server": ["CLI", "Python"]
+  "run_server": ["CLI", "Python"],
+  "docker": ["n", "y"],
+  "packaging": ["pip", "poetry", "poetry with requirements"]
 }
