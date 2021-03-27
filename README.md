@@ -1,4 +1,4 @@
-# FastAPI Template by [Kludex](https://github.com/Kludex)
+# FastAPI Template
 
 This is a very customizable FastAPI template!
 
