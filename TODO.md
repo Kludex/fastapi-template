@@ -13,3 +13,4 @@
 * [ ] Provide authentication systems (APIKey/OAuth2).
 * [ ] Generate openapi-python-client.
 * [ ] Use AsyncAPI instead of OpenAPI.
+* [ ] Add different CI/CD support (github/travis/jenkins).
