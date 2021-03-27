@@ -4,5 +4,7 @@
   "package_name": ["{{ cookiecutter.project_slug|replace('-', '_') }}", "app"],
   "description": "An amazing FastAPI project!",
   "full_name": "Default Name",
-  "email": "default@email.com"
+  "email": "default@email.com",
+
+  "run_server": ["CLI", "Python"]
 }
