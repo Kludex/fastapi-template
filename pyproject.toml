@@ -17,6 +17,7 @@ uvicorn = { extras = ["standard"], version = "^0.13.4" }
 fastapi = { extras = ["all"], version = "^0.63.0" }
 httpx = "^0.17.1"
 mypy = "^0.812"
+isort = "^5.8.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
