@@ -14,3 +14,4 @@
 * [ ] Generate openapi-python-client.
 * [ ] Use AsyncAPI instead of OpenAPI.
 * [ ] Add different CI/CD support (github/travis/jenkins).
+* [ ] Add Python package dependency manager (pip/poetry).
