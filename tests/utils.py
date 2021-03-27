@@ -34,7 +34,7 @@ def _build_tree(structure: str):
     return files
 
 
-def match_structure(tmp_path: Path, structure: str):
+def list_structures(tmp_path: Path, structure: str):
     tree = _build_tree(structure)
     current: List[PosixPath] = []
     base_path = str(tmp_path)
@@ -42,4 +42,4 @@ def match_structure(tmp_path: Path, structure: str):
         base_dir = root[root.startswith(base_path) and len(base_path) :]
         current.extend(Path("/", base_dir) / file for file in files)
         current.extend(Path("/", base_dir) / dir for dir in dirs)
-    return set(str(path) for path in current) == set(str(path) for path in tree)
+    return set(str(path) for path in current), set(str(path) for path in tree)

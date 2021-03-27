@@ -1,4 +1,7 @@
 {
   "project_name": "FastAPI Project",
-  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}"
+  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "description": "An amazing FastAPI project!",
+  "full_name": "Default Name",
+  "email": "default@email.com"
 }

@@ -1,20 +1,19 @@
 [tool.poetry]
-name = "fastapi-boilerplate"
+name = "app"
 version = "0.1.0"
-description = ""
-authors = ["Marcelo Trylesinski <marcelotryle@gmail.com>"]
-packages = [{ include = "fastapi_boilerplate" }]
+description = "{{cookiecutter.description}}"
+readme = "README.md"
+authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-cookiecutter = "^1.7.2"
+fastapi = "^0.63.0"
+uvicorn = { extras = ["standard"], version = "^0.13.4" }
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
 pytest-asyncio = "^0.14.0"
 pytest-sugar = "^0.9.4"
-uvicorn = { extras = ["standard"], version = "^0.13.4" }
-fastapi = { extras = ["all"], version = "^0.63.0" }
 httpx = "^0.17.1"
 
 [build-system]
