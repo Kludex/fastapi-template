@@ -1,9 +1,9 @@
 [tool.poetry]
-name = "app"
+name = "{{ cookiecutter.package_name }}"
 version = "0.1.0"
-description = "{{cookiecutter.description}}"
+description = "{{ cookiecutter.description }}"
+authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
 readme = "README.md"
-authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"

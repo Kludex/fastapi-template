@@ -3,7 +3,7 @@ import asyncio
 import pytest
 from httpx import AsyncClient
 
-from app.main import app
+from {{cookiecutter.package_name}}.main import app
 
 
 @pytest.fixture(scope="session", autouse=True)

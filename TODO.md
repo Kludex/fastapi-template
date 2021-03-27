@@ -5,7 +5,7 @@
 * [ ] Provide worker (ARC/Celery).
 * [ ] Provide SQL database support (SQLite/PostgreSQL/MySQL).
 * [ ] Provide ORM support (databases/orm/SQLAlchemy/Gino/Tortoise).
-* [ ] Run server via CLI instead of Python code.
+* [ ] Run server via CLI or Python code.
 * [ ] Setup Access and Application logging.
 * [ ] Setup k8s.
 * [ ] Setup NoSQL databases (MongoDB).
