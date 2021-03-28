@@ -14,6 +14,12 @@ cookiecutter https://github.com/Kludex/fastapi-template
 
 Configure what is needed, and you'll have your FastAPI application, ready to run! 🙂
 
+In case you just want to do a quick check, add the `--no-input` argument:
+
+``` bash
+cookiecutter https://github.com/Kludex/fastapi-template --no-input
+```
+
 ## License
 
 This project is licensed under the terms of the MIT license.
