@@ -8,5 +8,5 @@
 
   "run_server": ["CLI", "Python"],
   "docker": ["n", "y"],
-  "packaging": ["pip", "poetry", "poetry with requirements"]
+  "packaging": ["poetry", "pip", "poetry with requirements"]
 }

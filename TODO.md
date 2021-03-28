@@ -34,3 +34,6 @@
 * [X] Add Python package dependency manager
   + [X] Poetry
   + [X] Pip
+* [ ] Support docker https://github.com/python-poetry/poetry/discussions/1879#discussioncomment-216865.
+    - https://github.com/tiangolo/full-stack-fastapi-postgresql/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/backend/backend.dockerfile
+    - https://github.com/python-poetry/poetry/discussions/1879#discussioncomment-216865

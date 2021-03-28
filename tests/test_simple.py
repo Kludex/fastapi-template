@@ -18,8 +18,7 @@ simple-project/
         test_home.py
     README.md
     setup.cfg
-    requirements.txt
-    dev_requirements.txt
+    pyproject.toml
 """
 
 

@@ -7,13 +7,19 @@ ENV PYTHONPATH /app
 WORKDIR /app
 
 {% if cookiecutter.packaging == 'poetry' -%}
-COPY ./app/pyproject.toml ./app/poetry.lock*
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y \
+    curl \
+    build-essential
+
+COPY ./pyproject.toml ./poetry.lock* /app/
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | POETRY_HOME=/opt/poetry python \
     && cd /usr/local/bin \
     && ln -s /opt/poetry/bin/poetry \
-    && poetry config virtualenvs.create false \
-    && poetry install --no-root \
-    && rm ./app/pyproject.toml ./app/poetry.lock*
+    && poetry config virtualenvs.create false
+
+RUN poetry install --no-root --no-dev \
+    && rm pyproject.toml poetry.lock*
 {% else -%}
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip \
