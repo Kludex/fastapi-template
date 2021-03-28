@@ -3,8 +3,8 @@
 * [ ] Provide documentation
     - [ ] mkdocs
     - [ ] sphinx
-* [ ] Provide docstring
-    - [ ] Google
+* [X] Provide docstring
+    - [X] Google
 * [ ] Provide worker
     - [ ] ARC
     - [ ] Celery
@@ -41,3 +41,4 @@
     - https://github.com/python-poetry/poetry/discussions/1879#discussioncomment-216865
 * [ ] Support docker-compose.
 * [ ] Add individual scripts besides Makefile.
+* [ ] Add CORS possibility.

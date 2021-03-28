@@ -7,9 +7,12 @@ lint:  ## Linter the code.
 	isort {{ cookiecutter.package_name }} tests --check
 	flake8 {{ cookiecutter.package_name }} tests
 	mypy {{ cookiecutter.package_name }}
+{%- if cookiecutter.docstring == 'Google' %}
+	darglint {{ cookiecutter.package_name }}
+{% endif %}
 
 .PHONY: tests
-test:  ## Test your code.
+tests:  ## Test your code.
 	poetry run pytest tests/ --cov={{ cookiecutter.package_name }} --cov-report=term-missing:skip-covered --cov-report=xml
 
 {%- if cookiecutter.python_client == 'y' %}
