@@ -27,6 +27,10 @@ def remove_env_file():
     os.remove(".env")
 
 
+def remove_python_client_config():
+    os.remove("client-config.yaml")
+
+
 def main():
     if "{{ cookiecutter.run_server }}" == "CLI":
         remove___main__()
@@ -42,6 +46,9 @@ def main():
         remove_dev_requirements()
 
     remove_env_file()
+
+    if "{{ cookiecutter.python_client }}" == "n":
+        remove_python_client_config()
 
 
 if __name__ == "__main__":
