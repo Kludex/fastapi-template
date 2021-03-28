@@ -24,6 +24,7 @@ mypy = "^0.812"
 isort = "^5.8.0"
 flake8 = "^3.9.0"
 black = { version = "^20.8b1", allow-prereleases = true }
+SQLAlchemy = "^1.4.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
