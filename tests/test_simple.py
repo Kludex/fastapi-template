@@ -16,9 +16,11 @@ simple-project/
         __init__.py
         conftest.py
         test_home.py
+    .gitignore
     README.md
     setup.cfg
     pyproject.toml
+    Makefile
 """
 
 
