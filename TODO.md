@@ -17,6 +17,7 @@
     - [ ] Databases
     - [ ] Gino
     - [ ] Tortoise
+* [ ] Add migration scripts.
 * [X] Run server via CLI or Python code.
 * [ ] Add Gunicorn.
 * [ ] Setup Access and Application logging.
