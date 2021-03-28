@@ -21,6 +21,7 @@
 * [ ] Add Gunicorn.
 * [ ] Setup Access and Application logging.
 * [ ] Setup k8s.
+* [ ] Setup skaffold.
 * [ ] Setup NoSQL databases
     - [ ] MongoDB
 * [ ] Provide health endpoint.
