@@ -8,5 +8,6 @@
 
   "run_server": ["CLI", "Python"],
   "docker": ["n", "y"],
-  "packaging": ["poetry", "pip", "poetry with requirements"]
+  "packaging": ["poetry", "pip", "poetry with requirements"],
+  "docstring": ["None", "Google"]
 }
