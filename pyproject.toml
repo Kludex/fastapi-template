@@ -1,13 +1,17 @@
 [tool.poetry]
 name = "fastapi-boilerplate"
 version = "0.1.0"
-description = ""
+description = "CLI for FastAPI Template."
 authors = ["Marcelo Trylesinski <marcelotryle@gmail.com>"]
 packages = [{ include = "fastapi_boilerplate" }]
+
+[tool.poetry.scripts]
+fastapi = "fastapi_boilerplate.main:app"
 
 [tool.poetry.dependencies]
 python = "^3.8"
 cookiecutter = "^1.7.2"
+typer = { extras = ["all"], version = "^0.3.2" }
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
@@ -18,6 +22,8 @@ fastapi = { extras = ["all"], version = "^0.63.0" }
 httpx = "^0.17.1"
 mypy = "^0.812"
 isort = "^5.8.0"
+flake8 = "^3.9.0"
+black = { version = "^20.8b1", allow-prereleases = true }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
