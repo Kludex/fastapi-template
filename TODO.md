@@ -42,4 +42,4 @@
     - https://github.com/python-poetry/poetry/discussions/1879#discussioncomment-216865
 * [X] Support docker-compose.
 * [ ] Add individual scripts besides Makefile.
-* [ ] Add CORS possibility.
+* [X] Add CORS possibility.
