@@ -10,12 +10,16 @@ simple-project/
                 __init__.py
                 home.py
             __init__.py
+        core/
+            __init__.py
+            config.py
         __init__.py
         main.py
     tests/
         __init__.py
         conftest.py
         test_home.py
+    .env
     .gitignore
     README.md
     setup.cfg

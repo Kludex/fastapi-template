@@ -7,8 +7,9 @@
   "email": "default@email.com",
 
   "run_server": ["CLI", "Python"],
-  "docker": ["n", "y"],
+  "add_docker": [false, true],
+  "add_docker_compose": [false, true],
   "packaging": ["poetry", "pip", "poetry with requirements"],
   "docstring": ["None", "Google"],
-  "python_client": ["n", "y"]
+  "add_python_client": [false, true]
 }

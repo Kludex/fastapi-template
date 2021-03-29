@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: {{cookiecutter.project_slug}}
+    build: .
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    volumes:
+      - ./{{cookiecutter.package_name}}:/app/{{cookiecutter.package_name}}

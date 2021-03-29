@@ -9,6 +9,10 @@ def remove_dockerfile():
     os.remove("Dockerfile")
 
 
+def remove_docker_compose():
+    os.remove("docker-compose.yaml")
+
+
 def remove_requirements():
     filenames = ["dev_requirements.txt", "requirements.txt"]
     for file in filenames:
@@ -23,10 +27,6 @@ def remove_poetry():
     os.remove("pyproject.toml")
 
 
-def remove_env_file():
-    os.remove(".env")
-
-
 def remove_python_client_config():
     os.remove("client-config.yaml")
 
@@ -35,8 +35,11 @@ def main():
     if "{{ cookiecutter.run_server }}" == "CLI":
         remove___main__()
 
-    if "{{ cookiecutter.docker }}" == "n":
+    if "{{ cookiecutter.add_docker }}" == "False":
         remove_dockerfile()
+
+    if "{{ cookiecutter.add_docker_compose }}" == "False":
+        remove_docker_compose()
 
     if "{{ cookiecutter.packaging }}" == "poetry":
         remove_requirements()
@@ -45,9 +48,7 @@ def main():
     else:
         remove_dev_requirements()
 
-    remove_env_file()
-
-    if "{{ cookiecutter.python_client }}" == "n":
+    if "{{ cookiecutter.add_python_client }}" == "False":
         remove_python_client_config()
 
 
