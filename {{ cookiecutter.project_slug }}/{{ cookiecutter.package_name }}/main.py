@@ -17,7 +17,7 @@ def create_application() -> FastAPI:
 {% endif %}
     application = FastAPI(title=settings.PROJECT_NAME)
     {% if cookiecutter.add_cors == 'True' -%}
-    app.add_middleware(
+    application.add_middleware(
         CORSMiddleware,
         allow_origins=[str(origin) for origin in settings.BACKEND_CORS_ORIGINS],
         allow_credentials=True,
