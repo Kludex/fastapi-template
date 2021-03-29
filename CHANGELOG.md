@@ -1,5 +1,6 @@
 ## Latest Changes
 
+* ✨ Add CORS support. PR [#9](https://github.com/Kludex/fastapi-template/pull/9) by [@Kludex](https://github.com/Kludex).
 * ✨ Add docker-compose file. PR [#18](https://github.com/Kludex/fastapi-template/pull/18) by [@Kludex](https://github.com/Kludex).
 * ✨ Add Settings class. PR [#17](https://github.com/Kludex/fastapi-template/pull/17) by [@Kludex](https://github.com/Kludex).
 * 🚚 Rename cookiecutter boolean variables. PR [#16](https://github.com/Kludex/fastapi-template/pull/16) by [@Kludex](https://github.com/Kludex).
