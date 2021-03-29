@@ -40,6 +40,6 @@
 * [ ] Support docker
     - https://github.com/tiangolo/full-stack-fastapi-postgresql/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/backend/backend.dockerfile
     - https://github.com/python-poetry/poetry/discussions/1879#discussioncomment-216865
-* [ ] Support docker-compose.
+* [X] Support docker-compose.
 * [ ] Add individual scripts besides Makefile.
 * [ ] Add CORS possibility.

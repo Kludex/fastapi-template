@@ -8,6 +8,7 @@
 
   "run_server": ["CLI", "Python"],
   "add_docker": [false, true],
+  "add_docker_compose": [false, true],
   "packaging": ["poetry", "pip", "poetry with requirements"],
   "docstring": ["None", "Google"],
   "add_python_client": [false, true]

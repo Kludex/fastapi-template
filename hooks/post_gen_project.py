@@ -9,6 +9,10 @@ def remove_dockerfile():
     os.remove("Dockerfile")
 
 
+def remove_docker_compose():
+    os.remove("docker-compose.yaml")
+
+
 def remove_requirements():
     filenames = ["dev_requirements.txt", "requirements.txt"]
     for file in filenames:
@@ -31,8 +35,11 @@ def main():
     if "{{ cookiecutter.run_server }}" == "CLI":
         remove___main__()
 
-    if "{{ cookiecutter.add_docker }}":
+    if "{{ cookiecutter.add_docker }}" == "False":
         remove_dockerfile()
+
+    if "{{ cookiecutter.add_docker_compose }}" == "False":
+        remove_docker_compose()
 
     if "{{ cookiecutter.packaging }}" == "poetry":
         remove_requirements()
@@ -41,7 +48,7 @@ def main():
     else:
         remove_dev_requirements()
 
-    if "{{ cookiecutter.add_python_client }}":
+    if "{{ cookiecutter.add_python_client }}" == "False":
         remove_python_client_config()
 
 
