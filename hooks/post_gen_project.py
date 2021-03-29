@@ -35,7 +35,7 @@ def main():
     if "{{ cookiecutter.run_server }}" == "CLI":
         remove___main__()
 
-    if "{{ cookiecutter.docker }}" == "n":
+    if "{{ cookiecutter.add_docker }}":
         remove_dockerfile()
 
     if "{{ cookiecutter.packaging }}" == "poetry":
@@ -47,7 +47,7 @@ def main():
 
     remove_env_file()
 
-    if "{{ cookiecutter.python_client }}" == "n":
+    if "{{ cookiecutter.add_python_client }}":
         remove_python_client_config()
 
 
