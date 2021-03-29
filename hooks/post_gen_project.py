@@ -23,10 +23,6 @@ def remove_poetry():
     os.remove("pyproject.toml")
 
 
-def remove_env_file():
-    os.remove(".env")
-
-
 def remove_python_client_config():
     os.remove("client-config.yaml")
 
@@ -44,8 +40,6 @@ def main():
         remove_poetry()
     else:
         remove_dev_requirements()
-
-    remove_env_file()
 
     if "{{ cookiecutter.add_python_client }}":
         remove_python_client_config()

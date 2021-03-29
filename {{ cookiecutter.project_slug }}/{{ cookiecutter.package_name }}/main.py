@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from {{cookiecutter.package_name}}.api import router
+from {{cookiecutter.package_name}}.core.config import settings
 
 
 def create_application() -> FastAPI:
@@ -11,7 +12,7 @@ def create_application() -> FastAPI:
         FastAPI: Newly created FastAPI application.
     """
 {% endif %}
-    application = FastAPI()
+    application = FastAPI(title=settings.PROJECT_NAME)
     application.include_router(router)
     return application
 
