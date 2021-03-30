@@ -1,15 +1,15 @@
-{% if cookiecutter.add_cors == 'True' -%}
+{%- if cookiecutter.add_cors == 'True' %}
 from typing import List, Union
 
 from pydantic import BaseSettings, AnyHttpUrl, validator
-{% else -%}
+{%- else -%}
 from pydantic import BaseSettings
-{% endif %}
+{%- endif %}
 
 
 class Settings(BaseSettings):
     PROJECT_NAME: str
-    {% if cookiecutter.add_cors == 'True' -%}
+    {%- if cookiecutter.add_cors == 'True' %}
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = []
 
     @validator("BACKEND_CORS_ORIGINS", pre=True)

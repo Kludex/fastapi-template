@@ -15,7 +15,7 @@ lint:  ## Linter the code.
 tests:  ## Test your code.
 	poetry run pytest tests/ --cov={{ cookiecutter.package_name }} --cov-report=term-missing:skip-covered --cov-report=xml
 
-{% if cookiecutter.add_python_client == 'True' -%}
+{%- if cookiecutter.add_python_client == 'True' %}
 .PHONY: generate_client
 generate_client:
 	openapi-python-client --config client-config.yaml generate --url http://localhost:8000/openapi.json

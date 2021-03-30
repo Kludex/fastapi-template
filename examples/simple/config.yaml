@@ -1,4 +1,0 @@
-default_context:
-  project_name: "Simple Project"
-  project_slug: "simple-project"
-  package_name: "app"
