@@ -65,7 +65,7 @@ def is_same(dir1, dir2):
     return True
 
 
-@pytest.mark.parametrize("config_path", ["simple"])
+@pytest.mark.parametrize("config_path", ["simple", "docker"])
 def test_cookiecutter(tmp_path: Path, root_dir: Path, config_path: str):
     project_path = root_dir / f"tests/resources/{config_path}"
     config_file = project_path / "config.yaml"
