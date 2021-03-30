@@ -1,5 +1,6 @@
 ## Latest Changes
 
+* 👷 Add tests to the CI. PR [#23](https://github.com/Kludex/fastapi-template/pull/23) by [@Kludex](https://github.com/Kludex).
 * ✅ Add test for docker option. PR [#22](https://github.com/Kludex/fastapi-template/pull/22) by [@Kludex](https://github.com/Kludex).
 * ✅ Improve test setup. PR [#19](https://github.com/Kludex/fastapi-template/pull/19) by [@Kludex](https://github.com/Kludex).
 * ✨ Add CORS support. PR [#9](https://github.com/Kludex/fastapi-template/pull/9) by [@Kludex](https://github.com/Kludex).
