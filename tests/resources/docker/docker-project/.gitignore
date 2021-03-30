@@ -1,3 +1,7 @@
 # Python
 dist
 __pycache__
+
+# Tests
+.coverage
+coverage.xml
