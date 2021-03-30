@@ -5,7 +5,7 @@ help: ## Show this help
 
 .PHONY: tests
 tests: ## Run tests
-	pytest tests
+	pytest tests/ --cov="{{ cookiecutter.project_slug }}" --cov-report=term-missing:skip-covered --cov-report=xml
 
 
 .PHONY: test_suite
