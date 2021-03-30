@@ -4,8 +4,8 @@ import pytest
 from dotenv import load_dotenv
 from httpx import AsyncClient
 
-
 load_dotenv(".env")
+
 
 @pytest.fixture(scope="session", autouse=True)
 def event_loop():

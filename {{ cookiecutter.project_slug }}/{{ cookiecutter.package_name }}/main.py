@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-{% if cookiecutter.add_cors == 'True' -%}
+{%- if cookiecutter.add_cors == 'True' %}
 from fastapi.middleware.cors import CORSMiddleware
 {% endif %}
 
@@ -16,7 +16,7 @@ def create_application() -> FastAPI:
     """
 {% endif %}
     application = FastAPI(title=settings.PROJECT_NAME)
-    {% if cookiecutter.add_cors == 'True' -%}
+    {% if cookiecutter.add_cors == 'True' %}
     application.add_middleware(
         CORSMiddleware,
         allow_origins=[str(origin) for origin in settings.BACKEND_CORS_ORIGINS],
@@ -24,7 +24,7 @@ def create_application() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
-    {% endif %}
+    {% endif -%}
     application.include_router(router)
     return application
 
