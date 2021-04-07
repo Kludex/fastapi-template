@@ -1,7 +1,7 @@
 ## TODO
 
 * [ ] Provide documentation
-    - [ ] mkdocs
+    - [X] mkdocs
     - [ ] sphinx
 * [X] Provide docstring
     - [X] Google

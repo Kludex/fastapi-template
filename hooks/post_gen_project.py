@@ -1,4 +1,5 @@
 import os
+import shutil
 
 
 def remove___main__():
@@ -31,6 +32,10 @@ def remove_python_client_config():
     os.remove("client-config.yaml")
 
 
+def remove_docs():
+    shutil.rmtree("docs")
+
+
 def main():
     if "{{ cookiecutter.run_server }}" == "CLI":
         remove___main__()
@@ -50,6 +55,9 @@ def main():
 
     if "{{ cookiecutter.add_python_client }}" == "False":
         remove_python_client_config()
+
+    if "{{ cookiecutter.add_docs }}" == "False":
+        remove_docs()
 
 
 if __name__ == "__main__":
