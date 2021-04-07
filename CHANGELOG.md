@@ -1,5 +1,6 @@
 ## Latest Changes
 
+* 📝 Add documentation setup. PR [#26](https://github.com/Kludex/fastapi-template/pull/26) by [@Kludex](https://github.com/Kludex).
 * 🔥 Remove unused utils file. PR [#25](https://github.com/Kludex/fastapi-template/pull/25) by [@Kludex](https://github.com/Kludex).
 * 👷 Add tests to the CI. PR [#23](https://github.com/Kludex/fastapi-template/pull/23) by [@Kludex](https://github.com/Kludex).
 * ✅ Add test for docker option. PR [#22](https://github.com/Kludex/fastapi-template/pull/22) by [@Kludex](https://github.com/Kludex).
