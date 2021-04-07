@@ -24,3 +24,8 @@ generate_client:
 update_client:
 	openapi-python-client --config client-config.yaml update --url http://localhost:8000/openapi.json
 {% endif %}
+{%- if cookiecutter.add_docs == 'True' %}
+.PHONY: serve_docs
+serve_docs:
+	mkdocs serve -f docs/mkdocs.yml
+{% endif %}

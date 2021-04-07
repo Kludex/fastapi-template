@@ -12,5 +12,6 @@
   "packaging": ["poetry", "pip", "poetry with requirements"],
   "docstring": ["None", "Google"],
   "add_python_client": [false, true],
-  "add_cors": [false, true]
+  "add_cors": [false, true],
+  "add_docs": [false, true]
 }
