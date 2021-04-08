@@ -1,0 +1,17 @@
+default_context:
+  project_name: "Postgres Project"
+  project_slug: "postgres-project"
+  package_name: "postgres_project"
+  description: "An amazing FastAPI project!"
+  full_name: "Default Name"
+  email: "default@email.com"
+  run_server: "CLI"
+  add_docker: false
+  add_docker_compose: false
+  packaging: "poetry"
+  docstring: "None"
+  add_python_client: false
+  add_cors: false
+  add_docs: false
+
+  database: "PostgreSQL"
