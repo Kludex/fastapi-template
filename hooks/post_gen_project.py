@@ -1,6 +1,8 @@
 import os
 import shutil
 
+import isort
+
 
 def remove___main__():
     os.remove(os.path.join("{{ cookiecutter.package_name}}", "__main__.py"))
@@ -36,6 +38,19 @@ def remove_docs():
     shutil.rmtree("docs")
 
 
+def remove_database():
+    os.remove(os.path.join("{{ cookiecutter.package_name}}", "core/database.py"))
+    shutil.rmtree("scripts")
+
+
+def sort_files():
+    for root, _, files in os.walk("."):
+        for file in files:
+            if file.endswith(".py"):
+                path = f"{root}/{file}"
+                isort.file(path, quiet=True)
+
+
 def main():
     if "{{ cookiecutter.run_server }}" == "CLI":
         remove___main__()
@@ -58,6 +73,11 @@ def main():
 
     if "{{ cookiecutter.add_docs }}" == "False":
         remove_docs()
+
+    if "{{ cookiecutter.database }}" == "None":
+        remove_database()
+
+    sort_files()
 
 
 if __name__ == "__main__":

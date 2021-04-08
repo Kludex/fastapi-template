@@ -9,7 +9,7 @@
     - [ ] ARC
     - [ ] Celery
 * [ ] Provide SQL database support
-    - [ ] PostgreSQL
+    - [X] PostgreSQL
     - [ ] SQLite
     - [ ] MySQL
 * [ ] Provide ORM support

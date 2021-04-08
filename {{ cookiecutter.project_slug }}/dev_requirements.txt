@@ -4,3 +4,7 @@ pytest-sugar=="0.9.4"
 httpx=="0.17.1"
 mypy=="0.812"
 isort=="5.8.0"
+flake8=="3.9.0"
+{%- if cookiecutter.database == "PostgreSQL" %}
+sqlalchemy2-stubs=="0.0.1a4"
+{% endif %}

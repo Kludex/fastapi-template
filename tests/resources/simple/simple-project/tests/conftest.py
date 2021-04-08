@@ -1,6 +1,7 @@
 import asyncio
 
 import pytest
+from asgi_lifespan import LifespanManager
 from dotenv import load_dotenv
 from httpx import AsyncClient
 
@@ -18,5 +19,5 @@ def event_loop():
 async def client():
     from app.main import app
 
-    async with AsyncClient(app=app, base_url="http://test") as async_client:
-        yield async_client
+    async with AsyncClient(app=app, base_url="http://test") as ac, LifespanManager(app):
+        yield ac
