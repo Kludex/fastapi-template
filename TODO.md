@@ -13,7 +13,7 @@
     - [ ] SQLite
     - [ ] MySQL
 * [ ] Provide ORM support
-    - [ ] SQLAlchemy
+    - [X] SQLAlchemy
     - [ ] Databases
     - [ ] Gino
     - [ ] Tortoise
