@@ -1,5 +1,6 @@
 ## Latest Changes
 
+* 📝 Mark SQLAlchemy as completed on the TODO list. PR [#31](https://github.com/Kludex/fastapi-template/pull/31) by [@Kludex](https://github.com/Kludex).
 * ✨ Add PostgreSQL support. PR [#28](https://github.com/Kludex/fastapi-template/pull/28) by [@Kludex](https://github.com/Kludex).
 * ✨ Add mkdocs on cookiecutter. PR [#27](https://github.com/Kludex/fastapi-template/pull/27) by [@Kludex](https://github.com/Kludex).
 * 📝 Add documentation setup. PR [#26](https://github.com/Kludex/fastapi-template/pull/26) by [@Kludex](https://github.com/Kludex).
