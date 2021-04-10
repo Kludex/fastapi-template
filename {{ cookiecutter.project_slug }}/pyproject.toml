@@ -12,7 +12,8 @@ uvicorn = { extras = ["standard"], version = "^0.13.4" }
 {%- if cookiecutter.database == "PostgreSQL" %}
 asyncpg = "^0.22.0"
 sqlalchemy = "^1.4.6"
-{% endif %}
+tenacity = "^7.0.0"
+{%- endif %}
 
 [tool.poetry.dev-dependencies]
 asgi-lifespan = "^1.0.1"
@@ -26,7 +27,7 @@ isort = "^5.8.0"
 flake8 = "^3.9.0"
 {%- if cookiecutter.database == "PostgreSQL" %}
 sqlalchemy2-stubs = "^0.0.1a4"
-{% endif %}
+{%- endif %}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

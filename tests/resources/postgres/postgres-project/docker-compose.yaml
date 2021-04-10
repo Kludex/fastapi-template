@@ -10,9 +10,9 @@ services:
       - 8000:8000
     networks:
       - postgres-project
-
     volumes:
       - ./postgres_project:/app/postgres_project
+      - ./scripts:/app/scripts
   postgres:
     container_name: postgres-project-postgres
     image: postgres:13
@@ -28,11 +28,8 @@ services:
     volumes:
       - postgres:/data/postgres
       - ./scripts/database:/docker-entrypoint-initdb.d
-
 networks:
   postgres-project:
     driver: bridge
-
 volumes:
   postgres: null
-
