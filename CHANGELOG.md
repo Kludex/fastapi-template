@@ -1,5 +1,6 @@
 ## Latest Changes
 
+* 🔥 Remove TODO file. PR [#13](https://github.com/Kludex/fastapi-template/pull/13) by [@Kludex](https://github.com/Kludex).
 * ⬆️ Update dependency sqlalchemy to v1.4.7. PR [#34](https://github.com/Kludex/fastapi-template/pull/34) by [@renovate[bot]](https://github.com/apps/renovate).
 * 👷 Add commit message prefix for renovate bot. PR [#35](https://github.com/Kludex/fastapi-template/pull/35) by [@Kludex](https://github.com/Kludex).
 * Configure Renovate. PR [#24](https://github.com/Kludex/fastapi-template/pull/24) by [@renovate[bot]](https://github.com/apps/renovate).
