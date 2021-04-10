@@ -22,4 +22,4 @@ RUN poetry install --no-root --no-dev \
 
 COPY ./postgres_docker_project postgres_docker_project
 
-CMD ["uvicorn", "postgres_docker_project.main:app", "--host", "0.0.0.0"]
+CMD ["sh", "./scripts/start.sh"]

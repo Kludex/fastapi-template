@@ -13,6 +13,7 @@ services:
 
     volumes:
       - ./postgres_docker_project:/app/postgres_docker_project
+      - ./scripts:/app/scripts
   postgres:
     container_name: postgres-docker-project-postgres
     image: postgres:13
@@ -35,4 +36,3 @@ networks:
 
 volumes:
   postgres: null
-

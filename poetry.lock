@@ -921,6 +921,20 @@ python-versions = ">=3.6"
 full = ["aiofiles", "graphene", "itsdangerous", "jinja2", "python-multipart", "pyyaml", "requests", "ujson"]
 
 [[package]]
+name = "tenacity"
+version = "7.0.0"
+description = "Retry code until it succeeds"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = ">=1.9.0"
+
+[package.extras]
+doc = ["reno", "sphinx", "tornado (>=4.5)"]
+
+[[package]]
 name = "termcolor"
 version = "1.1.0"
 description = "ANSII Color formatting for output in terminal."
@@ -1075,7 +1089,7 @@ python-versions = ">=3.6.1"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "3f74b7ad0d053e2a701adde1993ad7191574f40d89a350eeb127b1ee09386252"
+content-hash = "365698e38f5f6d465153c257aabb68caa8a891535799744b31fe953bd98b76e6"
 
 [metadata.files]
 aiofiles = [
@@ -1608,6 +1622,10 @@ sniffio = [
 starlette = [
     {file = "starlette-0.13.6-py3-none-any.whl", hash = "sha256:bd2ffe5e37fb75d014728511f8e68ebf2c80b0fa3d04ca1479f4dc752ae31ac9"},
     {file = "starlette-0.13.6.tar.gz", hash = "sha256:ebe8ee08d9be96a3c9f31b2cb2a24dbdf845247b745664bd8a3f9bd0c977fdbc"},
+]
+tenacity = [
+    {file = "tenacity-7.0.0-py2.py3-none-any.whl", hash = "sha256:a0ce48587271515db7d3a5e700df9ae69cce98c4b57c23a4886da15243603dd8"},
+    {file = "tenacity-7.0.0.tar.gz", hash = "sha256:5bd16ef5d3b985647fe28dfa6f695d343aa26479a04e8792b9d3c8f49e361ae1"},
 ]
 termcolor = [
     {file = "termcolor-1.1.0.tar.gz", hash = "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"},

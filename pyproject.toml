@@ -29,6 +29,7 @@ darglint = "^1.7.0"
 mkdocs-material = "^7.1.0"
 asgi-lifespan = "^1.0.1"
 asyncpg = "^0.22.0"
+tenacity = "^7.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

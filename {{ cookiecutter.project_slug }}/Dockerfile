@@ -29,8 +29,4 @@ RUN pip install --upgrade pip \
 
 COPY ./{{ cookiecutter.package_name }} {{ cookiecutter.package_name }}
 
-{% if cookiecutter.run_server == 'CLI' -%}
-CMD ["uvicorn", "{{cookiecutter.package_name}}.main:app", "--host", "0.0.0.0"]
-{% else -%}
-CMD ["python", "-m", "{{cookiecutter.package_name}}"]
-{% endif -%}
+CMD ["sh", "scripts/start.sh"]
