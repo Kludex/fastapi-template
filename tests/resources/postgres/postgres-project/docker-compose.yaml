@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: postgres-project
+    build: .
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    networks:
+      - postgres-project
+
+    volumes:
+      - ./postgres_project:/app/postgres_project
+  postgres:
+    container_name: postgres-project-postgres
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - PGDATA=/data/postgres
+      - POSTGRES_MULTIPLE_DATABASES=test,app
+    ports:
+      - 5432:5432
+    networks:
+      - postgres-project
+    volumes:
+      - postgres:/data/postgres
+      - ./scripts/database:/docker-entrypoint-initdb.d
+
+networks:
+  postgres-project:
+    driver: bridge
+
+volumes:
+  postgres: null
+

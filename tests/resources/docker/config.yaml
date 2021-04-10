@@ -1,0 +1,15 @@
+default_context:
+  project_name: "Docker Project"
+  project_slug: "docker-project"
+  package_name: "docker_project"
+  description: "An amazing FastAPI project!"
+  full_name: "Default Name"
+  email: "default@email.com"
+  run_server: "CLI"
+  add_docker_compose: false
+  packaging: "poetry"
+  docstring: "None"
+  add_python_client: false
+  add_cors: false
+
+  add_docker: true

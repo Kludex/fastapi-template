@@ -1,0 +1,26 @@
+site_name: FastAPI Template
+site_description: Templates for FastAPI - Ready to code, ready to run!
+site_url: https://kludex.github.io/fastapi-template/
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+  features:
+    - search.suggest
+    - search.highlight
+repo_name: Kludex/fastapi-template
+repo_url: https://github.com/kludex/fastapi-template
+edit_uri: ""
+nav:
+  - Home: index.md

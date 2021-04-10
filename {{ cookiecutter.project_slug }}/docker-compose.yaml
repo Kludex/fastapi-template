@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: {{cookiecutter.project_slug}}
+    build: .
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+{%- if cookiecutter.database == "PostgreSQL" %}
+    networks:
+      - {{cookiecutter.project_slug}}
+{% endif %}
+    volumes:
+      - ./{{cookiecutter.package_name}}:/app/{{cookiecutter.package_name}}
+{%- if cookiecutter.database == "PostgreSQL" %}
+  postgres:
+    container_name: {{cookiecutter.project_slug}}-postgres
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - PGDATA=/data/postgres
+      - POSTGRES_MULTIPLE_DATABASES=test,app
+    ports:
+      - 5432:5432
+    networks:
+      - {{cookiecutter.project_slug}}
+    volumes:
+      - postgres:/data/postgres
+      - ./scripts/database:/docker-entrypoint-initdb.d
+{% endif %}
+
+{%- if cookiecutter.database == "PostgreSQL" %}
+networks:
+  {{cookiecutter.project_slug}}:
+    driver: bridge
+{% endif %}
+{%- if cookiecutter.database == "PostgreSQL" %}
+volumes:
+  postgres: null
+{% endif %}

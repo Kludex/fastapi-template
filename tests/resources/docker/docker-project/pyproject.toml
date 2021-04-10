@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "docker_project"
+version = "0.1.0"
+description = "An amazing FastAPI project!"
+authors = ["Default Name <default@email.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.63.0"
+uvicorn = { extras = ["standard"], version = "^0.13.4" }
+
+[tool.poetry.dev-dependencies]
+asgi-lifespan = "^1.0.1"
+pytest = "^6.2.2"
+pytest-asyncio = "^0.14.0"
+pytest-sugar = "^0.9.4"
+pytest-cov = "^2.11.1"
+httpx = "^0.17.1"
+mypy = "^0.812"
+isort = "^5.8.0"
+flake8 = "^3.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

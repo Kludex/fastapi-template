@@ -1,4 +1,7 @@
 import os
+import shutil
+
+import isort
 
 
 def remove___main__():
@@ -7,6 +10,10 @@ def remove___main__():
 
 def remove_dockerfile():
     os.remove("Dockerfile")
+
+
+def remove_docker_compose():
+    os.remove("docker-compose.yaml")
 
 
 def remove_requirements():
@@ -23,20 +30,36 @@ def remove_poetry():
     os.remove("pyproject.toml")
 
 
-def remove_env_file():
-    os.remove(".env")
-
-
 def remove_python_client_config():
     os.remove("client-config.yaml")
+
+
+def remove_docs():
+    shutil.rmtree("docs")
+
+
+def remove_database():
+    os.remove(os.path.join("{{ cookiecutter.package_name}}", "core/database.py"))
+    shutil.rmtree("scripts")
+
+
+def sort_files():
+    for root, _, files in os.walk("."):
+        for file in files:
+            if file.endswith(".py"):
+                path = f"{root}/{file}"
+                isort.file(path, quiet=True)
 
 
 def main():
     if "{{ cookiecutter.run_server }}" == "CLI":
         remove___main__()
 
-    if "{{ cookiecutter.docker }}" == "n":
+    if "{{ cookiecutter.add_docker }}" == "False":
         remove_dockerfile()
+
+    if "{{ cookiecutter.add_docker_compose }}" == "False":
+        remove_docker_compose()
 
     if "{{ cookiecutter.packaging }}" == "poetry":
         remove_requirements()
@@ -45,10 +68,16 @@ def main():
     else:
         remove_dev_requirements()
 
-    remove_env_file()
-
-    if "{{ cookiecutter.python_client }}" == "n":
+    if "{{ cookiecutter.add_python_client }}" == "False":
         remove_python_client_config()
+
+    if "{{ cookiecutter.add_docs }}" == "False":
+        remove_docs()
+
+    if "{{ cookiecutter.database }}" == "None":
+        remove_database()
+
+    sort_files()
 
 
 if __name__ == "__main__":

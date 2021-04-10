@@ -20,12 +20,12 @@ RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-
 
 RUN poetry install --no-root --no-dev \
     && rm pyproject.toml poetry.lock*
-{% else -%}
+{%- else %}
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt \
     && rm requirements.txt
-{% endif -%}
+{%- endif %}
 
 COPY ./{{ cookiecutter.package_name }} {{ cookiecutter.package_name }}
 
