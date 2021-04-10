@@ -32,7 +32,6 @@ services:
       - postgres:/data/postgres
       - ./scripts/database:/docker-entrypoint-initdb.d
 {%- endif %}
-
 {%- if cookiecutter.database == "PostgreSQL" %}
 networks:
   {{cookiecutter.project_slug}}:

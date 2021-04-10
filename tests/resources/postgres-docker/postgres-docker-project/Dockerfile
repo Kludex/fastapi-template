@@ -20,6 +20,7 @@ RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-
 RUN poetry install --no-root --no-dev \
     && rm pyproject.toml poetry.lock*
 
+COPY ./scripts scripts
 COPY ./postgres_docker_project postgres_docker_project
 
-CMD ["sh", "./scripts/start.sh"]
+CMD ["sh", "scripts/start.sh"]

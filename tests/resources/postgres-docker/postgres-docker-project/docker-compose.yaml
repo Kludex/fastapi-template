@@ -10,7 +10,6 @@ services:
       - 8000:8000
     networks:
       - postgres-docker-project
-
     volumes:
       - ./postgres_docker_project:/app/postgres_docker_project
       - ./scripts:/app/scripts
@@ -29,10 +28,8 @@ services:
     volumes:
       - postgres:/data/postgres
       - ./scripts/database:/docker-entrypoint-initdb.d
-
 networks:
   postgres-docker-project:
     driver: bridge
-
 volumes:
   postgres: null

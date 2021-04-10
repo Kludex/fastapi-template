@@ -20,6 +20,7 @@ RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-
 RUN poetry install --no-root --no-dev \
     && rm pyproject.toml poetry.lock*
 
+COPY ./scripts scripts
 COPY ./docker_project docker_project
 
-CMD ["uvicorn", "docker_project.main:app", "--host", "0.0.0.0"]
+CMD ["sh", "scripts/start.sh"]

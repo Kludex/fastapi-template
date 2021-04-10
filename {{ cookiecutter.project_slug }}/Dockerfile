@@ -27,6 +27,7 @@ RUN pip install --upgrade pip \
     && rm requirements.txt
 {%- endif %}
 
+COPY ./scripts scripts
 COPY ./{{ cookiecutter.package_name }} {{ cookiecutter.package_name }}
 
 CMD ["sh", "scripts/start.sh"]

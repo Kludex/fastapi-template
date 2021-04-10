@@ -11,7 +11,7 @@ fastapi = "^0.63.0"
 uvicorn = { extras = ["standard"], version = "^0.13.4" }
 asyncpg = "^0.22.0"
 sqlalchemy = "^1.4.6"
-
+tenacity = "^7.0.0"
 
 [tool.poetry.dev-dependencies]
 asgi-lifespan = "^1.0.1"
@@ -24,7 +24,6 @@ mypy = "^0.812"
 isort = "^5.8.0"
 flake8 = "^3.9.0"
 sqlalchemy2-stubs = "^0.0.1a4"
-
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

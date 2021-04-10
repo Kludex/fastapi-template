@@ -10,6 +10,7 @@ def remove___main__():
 
 def remove_dockerfile():
     os.remove("Dockerfile")
+    shutil.rmtree("scripts")
 
 
 def remove_docker_compose():
@@ -40,7 +41,8 @@ def remove_docs():
 
 def remove_database():
     os.remove(os.path.join("{{ cookiecutter.package_name}}", "core/database.py"))
-    shutil.rmtree("scripts")
+    os.remove("scripts/wait_database.py")
+    shutil.rmtree("scripts/database")
 
 
 def sort_files():
@@ -52,6 +54,9 @@ def sort_files():
 
 
 def main():
+    if "{{ cookiecutter.database }}" == "None":
+        remove_database()
+
     if "{{ cookiecutter.run_server }}" == "CLI":
         remove___main__()
 
@@ -73,9 +78,6 @@ def main():
 
     if "{{ cookiecutter.add_docs }}" == "False":
         remove_docs()
-
-    if "{{ cookiecutter.database }}" == "None":
-        remove_database()
 
     sort_files()
 
