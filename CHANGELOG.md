@@ -1,5 +1,6 @@
 ## Latest Changes
 
+* ⬆️ Update dependency sqlalchemy to v1.4.10. PR [#49](https://github.com/Kludex/fastapi-template/pull/49) by [@renovate[bot]](https://github.com/apps/renovate).
 * ⬆️ Update dependency sqlalchemy to v1.4.8. PR [#48](https://github.com/Kludex/fastapi-template/pull/48) by [@renovate[bot]](https://github.com/apps/renovate).
 * ✨ Add script to wait the database. PR [#37](https://github.com/Kludex/fastapi-template/pull/37) by [@Kludex](https://github.com/Kludex).
 * 🔥 Remove TODO file. PR [#13](https://github.com/Kludex/fastapi-template/pull/13) by [@Kludex](https://github.com/Kludex).
