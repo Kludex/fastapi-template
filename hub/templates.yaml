@@ -1,0 +1,6 @@
+templates:
+  - s3rius/FastAPI-template:
+    url: https://github.com/s3rius/FastAPI-template
+    directory: fastapi_template/template
+  - tiangolo/full-stack-fastapi-postgresql:
+    url: https://github.com/tiangolo/full-stack-fastapi-postgresql
