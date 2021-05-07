@@ -1,4 +1,4 @@
-fastapi==0.63.0
+fastapi==0.64.0
 uvicorn[standard]==0.13.4
 {%- if cookiecutter.database == "PostgreSQL" %}
 asyncpg==0.22.0
