@@ -2,5 +2,5 @@ fastapi==0.63.0
 uvicorn[standard]==0.13.4
 {%- if cookiecutter.database == "PostgreSQL" %}
 asyncpg==0.22.0
-sqlalchemy==1.4.11
+sqlalchemy==1.4.14
 {% endif %}
